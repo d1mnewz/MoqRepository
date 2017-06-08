@@ -19,7 +19,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MoqRepositoryCore\MoqRepositoryCore.Data.csproj" />
+    <ProjectReference Include="..\MoqRepositoryCore\MoqRepositorySample.Data.csproj" />
   </ItemGroup>
 
 </Project>

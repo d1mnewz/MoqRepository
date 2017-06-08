@@ -5,17 +5,17 @@ namespace Web.Controllers
 {
     public class HomeController<T> : Controller
     {
-        IRepository<T> _repository;
+        protected IRepository<T> Repository;
 
         public HomeController(IRepository<T> rep)
         {
-            this._repository = rep;
+            this.Repository = rep;
         }
 
         public IActionResult Index()
         {
 
-            return View(this._repository.FindAll());
+            return View(this.Repository.FindAll());
         }
 
         public IActionResult About()

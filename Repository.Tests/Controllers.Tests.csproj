@@ -20,7 +20,7 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MoqRepositoryCore\MoqRepositoryCore.Data.csproj" />
+    <ProjectReference Include="..\MoqRepositoryCore\MoqRepositorySample.Data.csproj" />
     <ProjectReference Include="..\Web\Web.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers.Tests", "Repository.Tests\Controllers.Tests.csproj", "{051BCC71-78CD-4234-95BE-537BCD1226FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqRepositoryCore.Data", "MoqRepositoryCore\MoqRepositoryCore.Data.csproj", "{2D7CF68B-47AB-4624-A11E-D018AB5FAE42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoqRepositorySample.Data", "MoqRepositoryCore\MoqRepositorySample.Data.csproj", "{2D7CF68B-47AB-4624-A11E-D018AB5FAE42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{D2932569-82ED-4975-946C-B6A3488AF47D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{D2932569-82ED-4975-946C-B6A3488AF47D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

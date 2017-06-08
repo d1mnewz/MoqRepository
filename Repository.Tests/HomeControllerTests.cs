@@ -5,7 +5,6 @@ using Moq;
 using MoqRepositoryCore.Data;
 using Web.Controllers;
 using Xunit;
-using Assert = Xunit.Assert;
 
 namespace Controllers.Tests
 {
@@ -14,7 +13,7 @@ namespace Controllers.Tests
         [Fact]
         public void IndexReturnsAViewResultWithAListOfPhones()
         {
-            // Arrange
+            // Arrange // maybe constructor and property?
             var mock = new Mock<IRepository<Product>>();
             mock.Setup(repo => repo.FindAll()).Returns(GetTestProducts);
             var controller = new HomeController<Product>(mock.Object);
@@ -28,11 +27,9 @@ namespace Controllers.Tests
             Assert.Equal(GetTestProducts().Count, model.Count());
         }
 
-
-
         private List<Product> GetTestProducts()
         {
-            var products = new List<Product>
+            return new List<Product>
             {
                 new Product { ProductId = 1, Name = "C# 7.1",
                     Description = "Cool update", Price = 49.99 },
@@ -41,7 +38,6 @@ namespace Controllers.Tests
                 new Product { ProductId = 3, Name = "Visual Basic",
                     Description = "What? I'm really too young to be feeling this old!", Price = 29.99 }
             };
-            return products;
         }
     }
 }
