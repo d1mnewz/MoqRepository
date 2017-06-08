@@ -12,7 +12,7 @@ namespace Controllers.Tests
     public class HomeControllerTests
     {
         [Fact]
-        public void IndexReturnsAViewResultWithAListOfPhones()
+        public void Index_TestProducts_ReturnsAViewResultWithAListOfPhones()
         {
             // Arrange // maybe constructor and property?
             var mock = new Mock<IRepository<Product>>();

@@ -2,7 +2,7 @@
 
 namespace MoqRepositorySample.Data.Repository
 {
-    public class Repository<T> : IRepository<T>
+    public class Repository<T> : IRepository<T> // some real repository
     {
         public IEnumerable<T> FindAll()
         {
