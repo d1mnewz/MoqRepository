@@ -13,7 +13,7 @@ namespace Repository.Tests
 
      public TestContext TestContext { get; set; }
 
-    private readonly IProductRepository _mockProductsRepository;
+    private readonly IRepository<Product> _mockProductsRepository;
 
 
         public ProductRepositoryTests()
@@ -30,14 +30,14 @@ namespace Repository.Tests
                     Description = "What? I'm really too young to be feeling this old!", Price = 29.99 }
             };
 
-            Mock<IProductRepository> mockProductRepository = new Mock<IProductRepository>();
+            Mock<IRepository<Product>> mockProductRepository = new Mock<IRepository<Product>>();
 
-            mockProductRepository.Setup(mr => mr.FindAll()).Returns(products);
+            mockProductRepository.Setup(mr => mr.FindAll<Product>()).Returns(products);
 
-            mockProductRepository.Setup(mr => mr.FindById(
+            mockProductRepository.Setup(mr => mr.FindById<Product>(
                 It.IsAny<int>())).Returns((int i) => products.Single(x => x.ProductId == i));
 
-            mockProductRepository.Setup(mr => mr.FindByName(
+            mockProductRepository.Setup(mr => mr.FindByName<Product>(
                 It.IsAny<string>())).Returns((string s) => products.Single(x => x.Name == s));
 
             mockProductRepository.Setup(mr => mr.Save(It.IsAny<Product>())).Returns(
@@ -80,7 +80,7 @@ namespace Repository.Tests
         [TestMethod]
         public void CanReturnProductById()
         {
-            var testProduct = this._mockProductsRepository.FindById(2);
+            var testProduct = this._mockProductsRepository.FindById<Product>(2);
 
             Assert.IsNotNull(testProduct);
             Assert.IsInstanceOfType(testProduct, typeof(Product));
@@ -90,7 +90,7 @@ namespace Repository.Tests
         [TestMethod]
         public void CanReturnProductByName()
         {
-            var testProduct = this._mockProductsRepository.FindByName("Visual Basic");
+            var testProduct = this._mockProductsRepository.FindByName<Product>("Visual Basic");
 
             Assert.IsNotNull(testProduct);
             Assert.IsInstanceOfType(testProduct, typeof(Product));
@@ -100,7 +100,7 @@ namespace Repository.Tests
         [TestMethod]
         public void CanReturnAllProducts()
         {
-            var testProducts = this._mockProductsRepository.FindAll();
+            var testProducts = this._mockProductsRepository.FindAll<Product>();
 
             Assert.IsNotNull(testProducts);
             Assert.AreEqual(3, testProducts.Count);
@@ -111,15 +111,15 @@ namespace Repository.Tests
         {
             Product newProduct = new Product
                 { Name = "C# 7.3", Description = "Short description here", Price = 39.99 };
-            int productCount = this._mockProductsRepository.FindAll().Count;
+            int productCount = this._mockProductsRepository.FindAll<Product>().Count;
             Assert.AreEqual(3, productCount);
 
             this._mockProductsRepository.Save(newProduct);
 
-            productCount = this._mockProductsRepository.FindAll().Count;
+            productCount = this._mockProductsRepository.FindAll<Product>().Count;
             Assert.AreEqual(4, productCount);
 
-            Product testProduct = this._mockProductsRepository.FindByName("C# 7.3");
+            Product testProduct = this._mockProductsRepository.FindByName<Product>("C# 7.3");
             Assert.IsNotNull(testProduct);
             Assert.IsInstanceOfType(testProduct, typeof(Product));
             Assert.AreEqual(4, testProduct.ProductId);
@@ -128,12 +128,12 @@ namespace Repository.Tests
         [TestMethod]
         public void CanUpdateProduct()
         {
-            Product testProduct = this._mockProductsRepository.FindById(1);
+            Product testProduct = this._mockProductsRepository.FindById<Product>(1);
             testProduct.Name = "C# 7.2";
 
             this._mockProductsRepository.Save(testProduct);
 
-            Assert.AreEqual("C# 7.2", this._mockProductsRepository.FindById(1).Name);
+            Assert.AreEqual("C# 7.2", this._mockProductsRepository.FindById<Product>(1).Name);
         }
     }
 }

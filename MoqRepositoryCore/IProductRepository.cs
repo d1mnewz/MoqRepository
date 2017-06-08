@@ -2,14 +2,14 @@ using System.Collections.Generic;
 
 namespace MoqRepositoryCore
 {
-    public interface IProductRepository
+    public interface IRepository<T>
     {
-        IList<Product> FindAll();
+        IList<T> FindAll<T>();
 
-        Product FindByName(string productName);
+        T FindByName<T>(string productName);
 
-        Product FindById(int productId);
+        T FindById<T>(int productId);
 
-        bool Save(Product target);
+        bool Save<T>(T target);
     }
 }
