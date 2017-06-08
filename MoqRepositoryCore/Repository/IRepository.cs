@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MoqRepositoryCore.Data
+namespace MoqRepositorySample.Data.Repository
 {
     public interface IRepository<T>
     {

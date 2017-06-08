@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MoqRepositoryCore.Data;
+using MoqRepositorySample.Data.Repository;
 
 namespace Web.Controllers
 {

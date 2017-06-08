@@ -2,7 +2,8 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using MoqRepositoryCore.Data;
+using MoqRepositorySample.Data.Entities;
+using MoqRepositorySample.Data.Repository;
 using Web.Controllers;
 using Xunit;
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MoqRepositoryCore.Data
+namespace MoqRepositorySample.Data.Repository
 {
     public class Repository<T> : IRepository<T>
     {
@@ -23,7 +23,7 @@ namespace MoqRepositoryCore.Data
         {
             throw new System.NotImplementedException();
         }
- 
+
     }
 }
 
