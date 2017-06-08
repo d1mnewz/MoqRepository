@@ -1,6 +1,6 @@
 using System;
 
-namespace MoqRepositoryCore
+namespace MoqRepositoryCore.Data
 {
     public class Product
     {

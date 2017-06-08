@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository.Tests", "Repository.Tests\Repository.Tests.csproj", "{051BCC71-78CD-4234-95BE-537BCD1226FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers.Tests", "Repository.Tests\Controllers.Tests.csproj", "{051BCC71-78CD-4234-95BE-537BCD1226FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqRepositoryCore", "MoqRepositoryCore\MoqRepositoryCore.csproj", "{2D7CF68B-47AB-4624-A11E-D018AB5FAE42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqRepositoryCore.Data", "MoqRepositoryCore\MoqRepositoryCore.Data.csproj", "{2D7CF68B-47AB-4624-A11E-D018AB5FAE42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{D2932569-82ED-4975-946C-B6A3488AF47D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2D7CF68B-47AB-4624-A11E-D018AB5FAE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D7CF68B-47AB-4624-A11E-D018AB5FAE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D7CF68B-47AB-4624-A11E-D018AB5FAE42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2932569-82ED-4975-946C-B6A3488AF47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2932569-82ED-4975-946C-B6A3488AF47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2932569-82ED-4975-946C-B6A3488AF47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2932569-82ED-4975-946C-B6A3488AF47D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
